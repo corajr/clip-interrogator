@@ -1,0 +1,27 @@
+name: clip-interrogator
+channels:
+- pytorch-nightly
+- nvidia
+- conda-forge
+dependencies:
+- python==3.10.6
+- pip==22.2.2
+- pytorch-nightly::pytorch
+- pytorch-nightly::pytorch-cuda==11.7  # [win]
+- torchvision
+- cudatoolkit==11.7.0  # [win]
+- cudnn==8.3.2.44  # [win]
+- regex
+- tqdm
+- timm
+- numpy
+- pandas
+- requests
+- jupyter
+- scikit-learn
+- pip:
+  - transformers==4.21.2
+  - tokenizers
+  - git+https://github.com/openai/CLIP.git#egg=clip
+  - jupyter_http_over_ws
+  - fairscale
